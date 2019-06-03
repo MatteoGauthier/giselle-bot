@@ -1,7 +1,7 @@
 // Libs Import
 const Discord = require('discord.js');
 const client = new Discord.Client();
-
+require('http').createServer().listen(process.env.PORT || 5000);
 // Config load, contain our client secret (ignored by gitignore)
 const config = require("./public_config.json");
 
