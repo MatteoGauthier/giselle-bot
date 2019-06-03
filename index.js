@@ -39,7 +39,7 @@ client.on('message', async message => {
   }
 
   if (command === 'news') {
-    message.channel.send({ newsEmbed });
+    message.channel.send({"title":"📰 News 📰","description":"Voici les news de l'équipe `naranja`","color":2448747,"footer":{"icon_url":"https://cdn.discordapp.com/embed/avatars/0.png","text":"News Cast"},"fields":[{"name":"1. BeeOne LiveSream","value":"Retrouver sur Twitch les streams de BeeOne ➡ https://semoule.fr/BeeOne"}]  } );
   }
 
 });
