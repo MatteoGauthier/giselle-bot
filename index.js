@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 // Config load, contain our client secret (ignored by gitignore)
-// const config = require("./config.json");
+const config = require("./public_config.json");
 
 // Global Variables
 var myArray = ['Hey', 'Hello', 'Bonjour', 'Bonsoir']
