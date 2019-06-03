@@ -1,9 +1,10 @@
 // Libs Import
 const Discord = require('discord.js');
 const client = new Discord.Client();
+require('http').createServer().listen(3000)
 
 // Config load, contain our client secret (ignored by gitignore)
-const config = require("./config.json");
+// const config = require("./config.json");
 
 // Global Variables
 var myArray = ['Hey', 'Hello', 'Bonjour', 'Bonsoir']
@@ -45,6 +46,6 @@ client.on('message', async message => {
 });
 
 // Login with secret
-client.login(config.token);
+client.login(process.env.TOKEN);
 
 // Authorization field https://discordapp.com/oauth2/authorize?client_id=585154615545430054&scope=bot
