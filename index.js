@@ -7,7 +7,7 @@ const config = require("./public_config.json");
 
 // Global Variables
 var myArray = ['Hey', 'Hello', 'Bonjour', 'Bonsoir']
-const newsEmbed = require("./news.json");
+const newsEmbed = {"title":"📰 News 📰","description":"Voici les news de l'équipe `naranja`","color":2448747,"footer":{"icon_url":"https://cdn.discordapp.com/embed/avatars/0.png","text":"News Cast"},"fields":[{"name":"1. BeeOne LiveSream","value":"Retrouver sur Twitch les streams de BeeOne ➡ https://semoule.fr/BeeOne"}]  };
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
