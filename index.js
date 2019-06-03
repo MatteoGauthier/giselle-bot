@@ -47,4 +47,4 @@ client.on('message', async message => {
 // Login with secret
 client.login(process.env.TOKEN);
 
-// Authorization field https://discordapp.com/oauth2/authorize?client_id=585154615545430054&scope=bot
+// Authorization field https://discordapp.com/oauth2/authorize?client_id=585154615545430054&scope=bot&permissions=67632193
