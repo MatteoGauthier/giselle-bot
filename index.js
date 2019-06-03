@@ -14,7 +14,7 @@ client.on('ready', () => {
   console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`);
   client.user.setActivity(`Serving ${client.guilds.size} servers`);
   const avatarClient = client.user.avatarURL;
-  newsEmbed.footer.icon_url = avatarClient
+  newsEmbed.footer.icon_url = avatarClient;
 });
 
 client.on('message', async message => {
@@ -39,7 +39,7 @@ client.on('message', async message => {
   }
 
   if (command === 'news') {
-    message.channel.send({embed: {"title":"📰 News 📰","description":"Voici les news de l'équipe `naranja`","color":2448747,"footer":{"icon_url":"https://cdn.discordapp.com/embed/avatars/0.png","text":"News Cast"},"fields":[{"name":"1. BeeOne LiveSream","value":"Retrouver sur Twitch les streams de BeeOne ➡ https://semoule.fr/BeeOne"}]  }});
+    message.channel.send({embed: newsEmbed});
   }
 
 });
