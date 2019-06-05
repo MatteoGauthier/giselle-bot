@@ -1,16 +1,5 @@
-# Giselle-bot
-Giselle est un bot discord créer à l'aide du framerworks discord.js qui commmunique avec l'[API Discord](https://discordapp.com/developers/docs). Giselle grandi de jours en jours, il se peut que des bugs peuvent être perçu (pas encore), si vous avez des remarques où des questions contacter moi à l'aide d'une des plateformes ci-dessous ou créer une [issue](https://github.com/MattixNow/giselle-bot/issues) au sein du repository github. Les pull-requests sont aussi disponibles.
-<details>
-<summary>Commandes disponibles</summary>
+# Giselle-bot Website
 
-| Commands | Description                                         |
-| -------- | --------------------------------------------------- |
-| `$help`  | Display help                                        |
-| `$about` | B2                                                  |
-| `$news`  | Faires apparaitres les actualités les plus fraiches |
-| `$ping`  | Uniquement pour les pongistes                       |
-| `$hey`   | Enjoliveur votre journée                            |
-</details>
 
 
 ## Development - Build

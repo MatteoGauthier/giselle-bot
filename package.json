@@ -1,17 +1,9 @@
 {
-  "name": "giselle",
+  "name": "giselle-website",
   "version": "1.0.0",
-  "description": "",
+  "description": "Giselle-bot Website",
   "main": "index.js",
-  "dependencies": {
-    "discord.js": "^11.5.1"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "repository": "https://github.com/MattixNow/giselle-bot.git",
+  "author": "Mattèo Gauthier <matteo.gauthier@gmail.com>",
+  "license": "MIT"
 }
