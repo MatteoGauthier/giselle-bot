@@ -40,7 +40,7 @@ client.on('message', async message => {
   // Commands
   if (command === 'ping') {
     const m = await message.channel.send("Ping?");
-    m.edit(`Pong! Lateny is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
+    m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
   }
   if (command === 'hey') {
     message.channel.send(`${randomValue} comment vas-tu ?`)
