@@ -3,13 +3,6 @@ Giselle est un bot discord créer à l'aide du framerworks discord.js qui commmu
 <details>
 <summary>Commandes disponibles</summary>
 
-| Column A | Column B | Column C |
-| -------- | -------- | -------- |
-| A1       | B1       | Cd1      |
-| A2       | B2       | C2       |
-| A3       | B3       | C3       |
-</details>
-
 | Commands | Description                                         |
 | -------- | --------------------------------------------------- |
 | `$help`  | Display help                                        |
@@ -17,6 +10,9 @@ Giselle est un bot discord créer à l'aide du framerworks discord.js qui commmu
 | `$news`  | Faires apparaitres les actualités les plus fraiches |
 | `$ping`  | Uniquement pour les pongistes                       |
 | `$hey`   | Enjoliveur votre journée                            |
+</details>
+
+
 ## Development - Build
 
 ### Requirement
