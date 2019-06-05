@@ -1,6 +1,8 @@
 # Giselle-bot Website
 
-
+## Todo
+- [ ] Créer un effet de transition au click des bouttons
+- [ ] Faires apparaitres à gauche une preview des fichiers github et à droite des screenshot du fonctionnement
 
 ## Development - Build
 
