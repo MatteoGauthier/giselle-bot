@@ -9,7 +9,7 @@
         },
         "fields": [{
             "name": "Les commandes",
-            "value": "- `$help` Display help \n- `$hey` Enjoliveur votre journée \n- `$news` Faires apparaitres les actualités les plus fraiches \n- `$ping` Uniquement pour les pongistes \n- `$about` Affiche les infos concernant la petite Giselle"
+            "value": "- `$help` Display help \n- `$hey` Enjoliveur votre journée \n- `$news` Faires apparaitres les actualitées les plus fraiches \n- `$ping` Uniquement pour les pongistes \n- `$about` Affiche les infos concernant la petite Giselle"
         }]
     }
 }
