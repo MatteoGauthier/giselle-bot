@@ -5,11 +5,11 @@
         "color": 8578810,
         "footer": {
             "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png",
-            "text": "About"
+            "text": "About | En direct du serveur 📌naranja | Au service de X.X users"
         },
         "fields": [{
                 "name": "Pourquoi Giselle",
-                "value": "Et bien parcequ'il me semblait utile d'avoir un petit bot pour afficher les dernières news de `naranja`"
+                "value": "Et bien parcequ'il me semblait utile d'avoir un petit bot pour afficher des outils ou des news"
             },
             {
                 "name": "Open Source Software",
