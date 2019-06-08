@@ -1,3 +1,5 @@
+
+
 var md = document.querySelector('.md');
 var data;
 // var views = new Vue({
@@ -5,7 +7,7 @@ var data;
 //     data: {
 //       message: 'Hello Vue!',
 //       markData: '# Marked in the browser'
-            
+
 
 //     }
 //   });
@@ -15,13 +17,14 @@ var data;
 
 
 
-fetch("https://raw.githubusercontent.com/MattixNow/giselle-bot/master/README.md"
-)
-.then(response => response.text())
-.then(data => {
-    console.log(data);
-    md.innerHTML = marked(data);
-    document.querySelector(".md details").remove();
-    document.querySelector(".md h1").remove();
+fetch("https://raw.githubusercontent.com/MattixNow/giselle-bot/master/README.md")
+    .then(response => response.text())
+    .then(data => {
+        console.log(data);
+        md.innerHTML = marked(data);
+        document.querySelector(".md details").remove();
+        document.querySelector(".md h1").remove();
+        document.querySelector(".md p").setAttribute("data-splitting", "");
+        Splitting();
 
-});
+    });
