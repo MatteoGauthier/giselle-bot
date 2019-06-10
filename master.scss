@@ -1,8 +1,43 @@
-$transFirst: -500px;
-@mixin fadeIn {
-    animation: fadein 2s 2s forwards;
-    background-color: #ffffff;
+$breakpoints: (
+  'small': (max-width: 450px),
+  'medium': (max-width: 800px),
+  'large': (max-width: 1000px),
+  'huge': (max-width: 1200px),
+);
+@mixin respond-to($breakpoint) {
+    $raw-query: map-get($breakpoints, $breakpoint);
+  
+    @if $raw-query {
+      $query: if(
+        type-of($raw-query) == 'string',
+        unquote($raw-query),
+        inspect($raw-query)
+      );
+  
+      @media #{$query} {
+        @content;
+      }
+    } @else {
+      @error 'No value found for `#{$breakpoint}`. '
+           + 'Please make sure it is defined in `$breakpoints` map.';
+    }
+  }
+
+@mixin fadeIn($transFirst) {
+    animation: fadein 2s 500ms forwards;
     opacity: 0;
+
+    @keyframes fadein {
+        from {
+            opacity: 0;
+            transform: translateY($transFirst);
+        }
+
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
 }
 
 @mixin discord {
@@ -11,32 +46,36 @@ $transFirst: -500px;
     animation: discord 500ms forwards;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 html,
 body {
     margin: 0;
-    padding: 10px;
-
     background-color: #36393f;
     color: #e4e4e4;
     font-family: "Work Sans", Work Sans, Arial, Helvetica, sans-serif;
 }
 
-
 .wrap {
     margin: 0 auto;
     max-width: 68rem;
     text-align: justify;
-
 }
 
 .discord-fake {
     @include discord;
     text-align: center;
-    margin: 5% 0 4% 0;
+    margin: 4% 0 4% 0;
 
     svg {
         width: 38%;
+         @include respond-to('small') {
+            width: 100% !important;
+      }
     }
+   
 }
 
 #point-giselle {
@@ -49,7 +88,7 @@ body {
 }
 
 .desc {
-    margin: 3% 0 8% 0;
+    margin: 3% 0 5% 0;
     text-shadow: 1px 2px 6px #0000005e;
 }
 
@@ -67,6 +106,7 @@ a {
     justify-content: space-around;
     opacity: 0;
     animation: showbtns 750ms 1500ms forwards;
+
     #btn1,
     #btn2 {
         flex: 0 1 10rem;
@@ -74,7 +114,7 @@ a {
         padding: 8px;
 
         box-shadow: inset 0px 0px 11px rgba(255, 255, 255, 0.48);
-        background: linear-gradient(109.54deg, #18C8FF 0%, rgb(122, 195, 255) 98.55%);
+        background: linear-gradient(109.54deg, #18c8ff 0%, rgb(122, 195, 255) 98.55%);
         box-shadow: 0px 1.30781px 6.53903px rgba(0, 0, 0, 0.25);
         border-radius: 11.5px;
         border-radius: 8px;
@@ -85,29 +125,28 @@ a {
         padding: 10px 0;
         transition: 500ms all;
     }
-    #btn1:hover,#btn2:hover {
-        transform:matrix(1.05,0.00,0.00,1.00,0,-5);
 
+    #btn1:hover,
+    #btn2:hover {
+        transform: matrix(1.05, 0, 0, 1, 0, -5);
     }
+
+    margin-bottom: 5%;
 }
 
-
-@keyframes fadein {
-    from {
-        background: #ffffff;
-        opacity: 0;
-        transform: translateY($transFirst);
-    }
-    to {
-        transform: translateY(0);
-        background: #36393f;
-        opacity: 1;
-    }
+.hide {
+    opacity: 0;
 }
+
+.video {
+    border-radius: 8px;
+    opacity: 0;
+    @include fadeIn(20px);
+}
+
 @keyframes discord {
-    from {
-        
-    }
+    from {}
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -116,22 +155,62 @@ a {
 
 @keyframes showbtns {
     from {
-
-      opacity: 0;
+        opacity: 0;
     }
+
     to {
         opacity: 1;
     }
 }
 
 .splitting .char {
-    animation: slide-in 1s cubic-bezier(.5, 0, .5, 1) both;
+    animation: slide-in 1s cubic-bezier(0.5, 0, 0.5, 1) both;
     animation-delay: calc(20ms * var(--char-index));
-  }
-  
-  @keyframes slide-in {
+}
+
+@keyframes slide-in {
     from {
-      transform: translateY(1em) rotate(-.1turn) scale(0.1);
-      opacity: 0;
+        transform: translateY(1em) rotate(-0.1turn) scale(0.1);
+        opacity: 0;
     }
-  }
+}
+
+@media (max-width:1140px) {
+    .wrap {
+        opacity: 1;
+        margin: 0 30px;
+    }
+
+    #point-giselle {
+        font-size: 6vmin;
+    }
+
+    .desc {
+        margin: 3% 0 10% 0;
+    }
+    .buttons #btn1,#btn2 {
+
+        max-width: 36%;
+    }
+    .discord-fake {
+        svg {
+            width: 60%;
+        }
+    }
+}
+
+
+// Footer
+
+footer {
+    text-align: center;
+    padding: 16px 20px;
+    border-top: solid #7c7c7c 2px;
+    
+}
+max
+#heart-icon {
+    opacity: 1;
+    transform: translateY(3px);
+}
+

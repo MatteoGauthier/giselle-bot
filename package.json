@@ -5,5 +5,14 @@
   "main": "index.js",
   "repository": "https://github.com/MattixNow/giselle-bot.git",
   "author": "Mattèo Gauthier <matteo.gauthier@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "npm-run-all -l -p start-server start-sass",
+    "start-sass": "sass --watch master.scss master.min.css --style=compressed",
+    "start-server": "live-server"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+
 }
