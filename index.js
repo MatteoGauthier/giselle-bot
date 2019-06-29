@@ -53,7 +53,6 @@ try {
 
   client.on('message', message => {
     /* Embeds Definition */
-    console.log(message.guild.name)
     var embedsArray = [newsEmbed, aboutEmbed, helpEmbed];
     embedsArray.forEach(function (le, index) {
       // console.log(index, " --- ", "1", le);
