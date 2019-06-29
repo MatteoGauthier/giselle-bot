@@ -32,18 +32,18 @@ Install the dependencies
 yarn install // or npm install
 ```
 
-
 Configure your own Discord API Token ([create your app here](https://discordapp.com/developers/applications/)), and copy it to your clipboard
-```bash
-your_Token
+Add to a `.env` file your token
+```
+TOKEN=your_Token
 ```
 
 Start the node.js application
 ```bash
-TOKEN=your_Token npm start
+npm start
 ```
 ```markdown
-TOKEN=your_Token nodemon // Auto-reload
+nodemon // Auto-reload
 ```
 
 ## Credits
