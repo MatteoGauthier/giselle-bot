@@ -17,7 +17,7 @@ var helpEmbed = require("./docs/help.json");
 
 client.on("error", (e) => {console.error(chalk.red(e))});
 client.on("warn", (e) => {console.warn(chalk.yellow(e))});
-client.on("debug", (e) => {console.info(chalk.green(e)e)});
+client.on("debug", (e) => {console.info(chalk.green(e))});
 
 try {
   client.on('ready', () => {
