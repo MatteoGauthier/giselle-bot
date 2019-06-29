@@ -1,6 +1,5 @@
 // Libs Import
 const Discord = require('discord.js');
-const chalk = require('chalk');
 const client = new Discord.Client();
 var printError = function (error, explicit) {
   console.log(`[${explicit ? 'EXPLICIT' : 'INEXPLICIT'}] ${error.name}: ${error.message}`);
@@ -15,9 +14,6 @@ var newsEmbed = require("./docs/news.json");
 var aboutEmbed = require("./docs/about.json");
 var helpEmbed = require("./docs/help.json");
 
-client.on("error", (e) => {console.error(chalk.red(e))});
-client.on("warn", (e) => {console.warn(chalk.yellow(e))});
-client.on("debug", (e) => {console.info(chalk.green(e))});
 
 try {
   client.on('ready', () => {
