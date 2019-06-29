@@ -14,6 +14,10 @@ var newsEmbed = require("./docs/news.json");
 var aboutEmbed = require("./docs/about.json");
 var helpEmbed = require("./docs/help.json");
 
+client.on("error", (e) => console.error(e));
+client.on("warn", (e) => console.warn(e));
+client.on("debug", (e) => console.info(e));
+
 try {
   client.on('ready', () => {
     let embedsArray = [newsEmbed, aboutEmbed, helpEmbed];
