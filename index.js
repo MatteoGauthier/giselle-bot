@@ -1,10 +1,15 @@
 // Libs Import
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var printError = function (error, explicit) {
-  console.log(`[${explicit ? 'EXPLICIT' : 'INEXPLICIT'}] ${error.name}: ${error.message}`);
-}
-// Config load, contain our client secret (ignored by gitignore)
+// const webhook = require("webhook-discord")
+ 
+// const Hook = new webhook.Webhook("")
+// // Config load, contain our client secret (ignored by gitignore)
+// // Hook.err("Node.js Debugger",`Error with ${process.env.npm_package_name} ⚠`)
+// console.error = function(msg) {
+//   Hook.err("Node.js Debugger",`Error with ${process.env.npm_package_name} ⚠ ${msg}`)
+//   process.stderr.write(msg);
+// };
 const config = require("./public_config.json");
 require('dotenv').config()
 
@@ -15,7 +20,10 @@ var aboutEmbed = require("./docs/about.json");
 var helpEmbed = require("./docs/help.json");
 
 
-try {
+
+  // client.on("error", (e) => {
+  //   Hook.err("Node.js Debugger",`Error with ${process.env.npm_package_name} ⚠ ${msg}`)
+  // });
   client.on('ready', () => {
     let embedsArray = [newsEmbed, aboutEmbed, helpEmbed];
     console.log(`Logged in as ${client.user.tag}!`);
@@ -27,8 +35,10 @@ try {
     });
   });
   //throw new Error('Yeah... Sorry');
+  
 
   client.on('message', async message => {
+    try {
 
     /* #### Commands definition #### */
 
@@ -50,6 +60,11 @@ try {
       }
 
     }
+  } catch (e) {
+    console.log(e)
+  }
+  
+  
   });
 
   client.on('message', message => {
@@ -103,10 +118,6 @@ try {
   });
   // Login with secret
   client.login(process.env.TOKEN);
-} catch (e) {
-  console.log(e)
-} finally {
-  console.log('finally running');
-}
 
 // Authorization field https://discordapp.com/oauth2/authorize?client_id=585154615545430054&scope=bot&permissions=67632193
+  
