@@ -31,7 +31,9 @@ client.on("ready", () => {
     let embedsArray = [newsEmbed, aboutEmbed, helpEmbed]
     console.log(`Logged in as ${client.user.tag}!`)
     console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds. ⏱️  ${dateTime}`)
+    setInterval(() => {
     client.user.setActivity(`Chèvre laitière | $help | semoule.fr`)
+    }, 10000)
     const avatarClient = client.user.avatarURL
     embedsArray.forEach(function(el) {
         el.embed.footer.icon_url = avatarClient
